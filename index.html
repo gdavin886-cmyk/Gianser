@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#70412d" />
+    <title>Gianser — browse your way</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav class="nav glass" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Gianser home"><span class="brand-mark">G</span><span>gianser</span></a>
+        <div class="nav-links"><a class="active" href="#home">Home</a><a href="#features">Explore</a><a href="#downloads">Downloads</a></div>
+        <button class="icon-button" id="themeToggle" aria-label="Toggle color mode">☾</button>
+      </nav>
+
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Your personal web space</p>
+          <h1>Browse <em>without</em><br />limits.</h1>
+          <p class="intro">A calmer, faster way to explore the web. Watch, save and organize the things that matter to you.</p>
+          <form class="search glass" id="searchForm">
+            <span class="search-icon">⌕</span>
+            <input id="searchInput" aria-label="Search or enter a URL" placeholder="Search or enter a URL" />
+            <button type="submit">Go <span>↗</span></button>
+          </form>
+          <div class="quick-links" aria-label="Quick access">
+            <button data-query="Trending videos"><b>▶</b> Video</button>
+            <button data-query="Beautiful photography"><b>◉</b> Images</button>
+            <button data-query="Latest news"><b>✦</b> Discover</button>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="sun"></div><div class="orb orb-one"></div><div class="orb orb-two"></div>
+          <div class="arch arch-back"></div><div class="arch arch-front"></div>
+          <div class="art-label"><span>01</span><i></i><span>GIANser / 2024</span></div>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="section-heading"><p class="eyebrow"><span></span> Designed around you</p><h2>Everything in one<br /><em>beautiful</em> place.</h2></div>
+        <div class="feature-grid">
+          <article class="feature-card video"><div class="card-icon">▷</div><h3>Watch freely</h3><p>Play online videos in the player you prefer, with picture-in-picture ready when you are.</p><a href="#player">Open player <span>→</span></a><div class="card-art play-art">▶</div></article>
+          <article class="feature-card download" id="downloads"><div class="card-icon">↓</div><h3>Save with ease</h3><p>Smart media detection keeps every download organized and ready offline.</p><a href="#downloads" id="downloadAction">View downloads <span>→</span></a><div class="download-meter"><span>Downloading</span><b>74%</b><div><i></i></div></div></article>
+          <article class="feature-card customize"><div class="card-icon">✦</div><h3>Make it yours</h3><p>Choose a color, wallpaper and the amount of glass you want to see.</p><button id="customizeButton">Customize <span>→</span></button><div class="color-dots"><i></i><i></i><i></i><i></i></div></article>
+        </div>
+      </section>
+
+      <section class="control glass" id="player"><div><p class="eyebrow"><span></span> Built for flow</p><h2>Your web. <em>Your rules.</em></h2></div><p>Keep your last session, quickly share links, or send any video to another player. Gianser remembers the details so you can stay in the moment.</p><button class="round-arrow" aria-label="Learn more">↗</button></section>
+      <footer><span>© 2024 GIANser</span><span>Made for a more personal web</span></footer>
+    </main>
+    <dialog id="customizeDialog"><button class="close" aria-label="Close">×</button><p class="eyebrow"><span></span> Appearance</p><h2>Set the mood.</h2><p>Choose a background color for your Gianser space.</p><div class="palette"><button data-color="#70412d" style="--c:#70412d" aria-label="Brown"></button><button data-color="#385b55" style="--c:#385b55" aria-label="Forest"></button><button data-color="#334b70" style="--c:#334b70" aria-label="Blue"></button><button data-color="#79415b" style="--c:#79415b" aria-label="Berry"></button></div></dialog>
+    <div class="toast" id="toast" role="status">Ready to explore.</div>
+    <script src="app.js"></script>
+  </body>
+</html>
